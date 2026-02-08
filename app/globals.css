@@ -1,5 +1,33 @@
 @import "tailwindcss/preflight";
 @import "tailwindcss/utilities";
+body {
+  background: #0b0b0b;
+  color: #e7d3a7;
+}
+
+.gold {
+  color: #d4a24c;
+}
+
+.gold-border {
+  border: 1px solid #d4a24c;
+}
+
+.gold-btn {
+  background: linear-gradient(145deg, #d4a24c, #8c5a12);
+  color: black;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 14px 28px;
+  border-radius: 6px;
+  box-shadow: 0 0 20px rgba(212, 162, 76, 0.5);
+  transition: 0.3s;
+}
+
+.gold-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(212, 162, 76, 0.9);
+}
 
 body {
   background: url('/jungle.jpg') no-repeat center center fixed;
