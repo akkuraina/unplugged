@@ -1,28 +1,28 @@
 export default function Timeline() {
+  const events = [
+    { date: "10 FEB", label: "Registrations Open" },
+    { date: "10 MAR", label: "Round 1 Results" },
+    { date: "5 APR", label: "Final Hackathon @ DJSCE" },
+  ];
+
   return (
-    <section
-      id="timeline"
-      className="min-h-screen flex flex-col justify-center items-center text-center px-10"
-    >
-      <h2 className="text-5xl text-yellow-400 mb-20">
-        FROM IDEA TO IMPACT
+    <section className="min-h-screen flex flex-col justify-center items-center text-center px-10 py-24">
+      <h2 className="heading text-4xl md:text-5xl mb-20">
+        EXPEDITION TIMELINE
       </h2>
 
-      <div className="space-y-10 text-xl">
-        <div>
-          <p className="text-3xl text-yellow-500">10 FEB</p>
-          <p>Registrations Open</p>
-        </div>
-
-        <div>
-          <p className="text-3xl text-yellow-500">10 MAR</p>
-          <p>Round 1 Results</p>
-        </div>
-
-        <div>
-          <p className="text-3xl text-yellow-500">5 APR</p>
-          <p>Final Hackathon @ DJSCE</p>
-        </div>
+      <div className="space-y-12 max-w-xl">
+        {events.map((event, i) => (
+          <div
+            key={event.date}
+            className="glass px-8 py-6 border-l-4 border-amber-500"
+          >
+            <p className="text-2xl md:text-3xl jurassic-gold font-bold mb-2">
+              {event.date}
+            </p>
+            <p className="text-amber-100/90 text-lg">{event.label}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
