@@ -14,7 +14,7 @@ export const cinzel = Cinzel({
 
 export const metadata = {
   title: "Unplugged 3.0 | Jurassic World",
-  description: "24 Hour Hardware Hackathon by IETE DJSCE",
+  description: "24 Hour Hardware Hackathon by IETE-SF X MICROMINDS DJSCE",
 };
 
 export default function RootLayout({ children }) {
