@@ -1,13 +1,15 @@
 'use client';
 
 import ParallaxBackground from '@/components/ParallaxBackground';
+import NavBar from '@/components/NavBar';
 
 export default function Home() {
   return (
     <main className="relative min-h-[300vh]">
       {/* Parallax Background */}
       <ParallaxBackground />
-
+      {/*navbar*/}
+      <NavBar />
       {/* Content Layer */}
       <div className="relative z-10">
         {/* Hero Section */}
@@ -25,21 +27,52 @@ export default function Home() {
         </section>
 
         {/* Content Section 1 */}
-        <section className="min-h-screen flex items-center justify-center px-4">
-          <div className="max-w-4xl bg-black/40 backdrop-blur-sm p-12 rounded-lg border border-jp-yellow/30">
-            <h2 className="jp-font text-6xl text-jp-yellow mb-6">
-              65 Million Years in the Making
-            </h2>
-            <p className="text-white text-xl leading-relaxed mb-6">
-              An adventure 65 million years in the making. Experience the wonder and majesty 
-              of creatures that once ruled our planet. Through the miracle of genetic engineering, 
-              we've brought them back.
-            </p>
-            <p className="text-white/80 text-lg leading-relaxed">
-              But as you'll soon discover, life finds a way...
-            </p>
-          </div>
-        </section>
+        <section className="min-h-screen flex items-center justify-center px-4 py-8">
+  <div className="max-w-6xl w-full">
+    {/* Main Box */}
+    <div className="bg-black/40 backdrop-blur-sm p-12 rounded-lg border border-jp-yellow/30 mb-8">
+      <h2 className="jp-font text-6xl text-jp-yellow mb-6 text-center">
+        About Unplugged
+      </h2>
+      <p className="text-white text-xl leading-relaxed text-center">
+        An adventure 65 million years in the making. Experience the wonder and majesty 
+        of creatures that once ruled our planet.
+      </p>
+    </div>
+
+    {/* Connecting Lines */}
+    <div className="flex justify-center mb-8">
+      <div className="w-px h-12 bg-jp-yellow/30"></div>
+    </div>
+    <div className="flex justify-center mb-8">
+      <div className="w-2/3 h-px bg-jp-yellow/30 relative">
+        <div className="absolute left-1/4 -translate-x-1/2 -top-6 w-px h-6 bg-jp-yellow/30"></div>
+        <div className="absolute right-1/4 translate-x-1/2 -top-6 w-px h-6 bg-jp-yellow/30"></div>
+      </div>
+    </div>
+
+    {/* Two Smaller Boxes */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="bg-black/40 backdrop-blur-sm p-8 rounded-lg border border-jp-yellow/30">
+        <h3 className="jp-font text-4xl text-jp-yellow mb-4 text-center">
+          Unplugged 1.0
+        </h3>
+        <p className="text-white/80 text-lg leading-relaxed text-center">
+          Through the miracle of genetic engineering, we've brought them back.
+        </p>
+      </div>
+
+      <div className="bg-black/40 backdrop-blur-sm p-8 rounded-lg border border-jp-yellow/30">
+        <h3 className="jp-font text-4xl text-jp-yellow mb-4 text-center">
+          Unplugged 2.0
+        </h3>
+        <p className="text-white/80 text-lg leading-relaxed text-center">
+          But as you'll soon discover, life finds a way...
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* Content Section 2 */}
         <section className="min-h-screen flex items-center justify-center px-4">
