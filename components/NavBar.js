@@ -5,10 +5,10 @@ import { UNSTOP_REGISTER_URL } from "@/lib/constants";
 
 const NAV_LINKS = [
   { name: "About", href: "/about" },
-  { name: "Committee", href: "/committee" },
   { name: "Evaluation", href: "/evaluation" },
   { name: "Timeline", href: "/timeline" },
   { name: "FAQ", href: "/faq" },
+  { name: "Committee", href: "/committee" },
   { name: "Register", href: UNSTOP_REGISTER_URL, external: true },
 ];
 

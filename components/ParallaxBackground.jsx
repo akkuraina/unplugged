@@ -100,14 +100,16 @@ export default function ParallaxBackground() {
           opacity: isLoaded ? 1 : 0,
         }}
       >
-        {/* PLACEHOLDER: Add your Pterodactyl PNG here */}
-        <div className="relative w-72 h-56 bg-blue-500/20 rounded-lg border-2 border-dashed border-blue-500 flex items-center justify-center shadow-2xl">
-          <span className="text-white text-center text-sm">
-            🦅 Pterodactyl PNG<br />
-            (swoops in from TOP RIGHT on load)<br />
-            272x256px
-          </span>
-        </div>
+        <img 
+          src="/trex.png" 
+          alt="T-Rex"
+          className="object-contain drop-shadow-2xl"
+          style={{ 
+            width: '400px', 
+            height: 'auto',
+            backgroundColor: 'transparent'
+          }}
+        />
       </div>
 
       {/* SCROLL-ACTIVATED: Additional ground dinosaur - appears as you scroll */}
