@@ -14,12 +14,10 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0f0a]/30 to-[#0a0f0a]/90" />
 
       <div className="relative z-10 max-w-6xl px-6">
-        <h1 className={`${bebas.className} hero-title font-bold text-amber-400 mb-6`}>
-          UNPLUGGED 3.0
-        </h1>
-        <p className="text-amber-500/90 text-lg md:text-xl mb-2 tracking-wide">
-          WHEN INNOVATION MEETS THE WILD
-        </p>
+        <div
+      className="absolute left-1/2 -translate-x-1/2 top-[109px] w-[1072px] h-[603px] bg-center bg-contain bg-no-repeat"
+      style={{ backgroundImage: "url('/unpluggedlogo.png')" }}
+    />
         <p className="text-amber-100/90 text-lg mb-10">
           A 24-hour National Level Hardware Hackathon by IETE DJSCE
         </p>
