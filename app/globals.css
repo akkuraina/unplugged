@@ -37,3 +37,20 @@ section {
 ::-webkit-scrollbar-thumb:hover {
   background: #FFC500;
 }
+
+/* Custom Component Classes */
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+.heading {
+  @apply text-4xl md:text-5xl font-bold tracking-widest jp-font text-white;
+}
+
+.jurassic-btn {
+  @apply px-8 py-3 font-bold text-amber-100 border-2 border-amber-400 rounded-full hover:bg-amber-400 hover:text-black transition-all duration-300 text-sm md:text-base;
+}
+
+.jurassic-gold {
+  @apply text-amber-400;
+}

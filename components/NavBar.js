@@ -6,27 +6,27 @@ import { UNSTOP_REGISTER_URL } from "@/lib/constants";
 
 const NAV_LINKS = [
   { name: "About", href: "#about" },
+  { name: "Tracks", href: "#tracks" },
   { name: "Evaluation", href: "#evaluation" },
   { name: "Timeline", href: "#timeline" },
   { name: "FAQ", href: "#faq" },
-  { name: "Committee", href: "/committee" },
   { name: "Register", href: UNSTOP_REGISTER_URL, external: true },
 ];
 
 export default function NavBar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full">
-      <nav className="flex items-center justify-between w-full min-h-[80px] px-8 md:px-12 lg:px-16 bg-gradient-to-b from-black/70 to-transparent backdrop-blur-sm">
+      <nav className="flex items-center justify-between w-full min-h-[100px] px-8 md:px-12 lg:px-16 bg-gradient-to-b from-black/70 to-transparent backdrop-blur-sm">
         
-        {/* Left: IETE + IIC Logos */}
-        <div className="flex items-center gap-8 md:gap-12 shrink-0">
+        {/* Left: IETE + IIC + MicroMinds Logos */}
+        <div className="flex items-center gap-6 md:gap-10 shrink-0">
           <Link href="https://djsceietesf.wordpress.com/" target="_blank">
             <Image
               src="/iete.png"
               alt="IETE Logo"
-              width={120}
-              height={48}
-              className="object-contain h-10 md:h-12 w-auto"
+              width={140}
+              height={56}
+              className="object-contain h-14 md:h-16 w-auto"
               priority
             />
           </Link>
@@ -35,9 +35,19 @@ export default function NavBar() {
             <Image
               src="/iic.png"
               alt="IIC Logo"
-              width={120}
-              height={48}
-              className="object-contain h-10 md:h-12 w-auto"
+              width={140}
+              height={56}
+              className="object-contain h-14 md:h-16 w-auto"
+            />
+          </Link>
+
+          <Link href="#" target="_blank">
+            <Image
+              src="/microminds.png"
+              alt="MicroMinds Logo"
+              width={140}
+              height={56}
+              className="object-contain h-14 md:h-16 w-auto"
             />
           </Link>
         </div>
