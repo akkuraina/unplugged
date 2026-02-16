@@ -12,6 +12,8 @@
 }
 html {
   scroll-behavior: smooth;
+  /* Slightly reduce root font-size so rem-based sizes appear a bit smaller */
+  font-size: 15px;
 }
 section {
   scroll-margin-top: 100px;
@@ -44,7 +46,7 @@ section {
 }
 
 .heading {
-  @apply text-4xl md:text-5xl font-bold tracking-widest jp-font text-white;
+  @apply text-3xl md:text-4xl font-bold tracking-widest jp-font text-white;
 }
 
 .jurassic-btn {
@@ -54,3 +56,5 @@ section {
 .jurassic-gold {
   @apply text-amber-400;
 }
+
+/* Removed site-wide transform scaling to avoid layout gaps/white borders */
