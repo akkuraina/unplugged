@@ -8,7 +8,8 @@ export default function Unplugged2() {
       <NavBar />
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 relative bg-center bg-cover bg-no-repeat py-24" 
+      <section 
+        className="min-h-screen flex items-center justify-center px-4 relative bg-center bg-cover bg-no-repeat py-24"
         style={{ backgroundImage: "url('/night.png')" }}>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/75 to-black/85" />
         <div className="relative z-10 text-center max-w-4xl">
@@ -17,8 +18,9 @@ export default function Unplugged2() {
           </p>
           <h1 className="heading mb-8">UNPLUGGED 2.0</h1>
           <p className="text-amber-100/90 text-base md:text-lg mb-8">
-            Building on the success of Unplugged 1.0, this edition brought bigger challenges, 
-            more opportunities, and an even stronger community of innovators.
+            Unplugged 2.0 took everything that made the first edition successful and elevated it.
+            With increased participation, more tracks, and enhanced mentorship opportunities,
+            this edition became a landmark event in the student hackathon community.
           </p>
         </div>
       </section>
@@ -44,17 +46,22 @@ export default function Unplugged2() {
 
             {/* Content */}
             <div className="space-y-6 order-1 md:order-2">
+
               <div>
-                <h2 className="text-3xl font-bold text-amber-300 mb-4">Bigger & Better</h2>
+                <h2 className="text-3xl font-bold text-amber-300 mb-4">
+                  Bigger & Better
+                </h2>
                 <p className="text-amber-100/85 leading-relaxed">
-                  Unplugged 2.0 took everything that made the first edition successful and elevated it. 
-                  With increased participation, more tracks, and enhanced mentorship opportunities, 
+                  Unplugged 2.0 took everything that made the first edition successful and elevated it.
+                  With increased participation, more tracks, and enhanced mentorship opportunities,
                   this edition became a landmark event in the student hackathon community.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-amber-300 mb-4">What Made It Special</h2>
+                <h2 className="text-3xl font-bold text-amber-300 mb-4">
+                  What Made It Special
+                </h2>
                 <ul className="text-amber-100/85 space-y-2">
                   <li className="flex items-start gap-3">
                     <span className="text-jp-yellow">✓</span>
@@ -80,13 +87,16 @@ export default function Unplugged2() {
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-amber-300 mb-4">Legacy</h2>
+                <h2 className="text-3xl font-bold text-amber-300 mb-4">
+                  Legacy
+                </h2>
                 <p className="text-amber-100/85 leading-relaxed">
-                  Unplugged 2.0 established itself as a premier destination for student innovators. 
-                  The event demonstrated the power of collaborative innovation and set the stage for 
+                  Unplugged 2.0 established itself as a premier destination for student innovators.
+                  The event demonstrated the power of collaborative innovation and set the stage for
                   even greater accomplishments to come.
                 </p>
               </div>
+
             </div>
           </div>
 
@@ -103,4 +113,4 @@ export default function Unplugged2() {
       </section>
     </main>
   )
-}
+};

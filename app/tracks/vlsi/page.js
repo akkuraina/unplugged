@@ -18,7 +18,8 @@ export default function VLSITrack() {
           </p>
           <h1 className="heading mb-8">VLSI TRACK</h1>
           <p className="text-amber-100/90 text-base md:text-lg mb-8">
-            Design cutting-edge digital systems and optimize silicon at scale
+            Design and implement digital systems. Work with HDL, circuit design,
+            and hardware optimization to push the boundaries of silicon innovation.
           </p>
         </div>
       </section>
@@ -34,18 +35,23 @@ export default function VLSITrack() {
             
             {/* Content */}
             <div className="space-y-6">
+              
               <div>
-                <h2 className="text-3xl font-bold text-amber-300 mb-4">Problem Statement</h2>
+                <h2 className="text-3xl font-bold text-amber-300 mb-4">
+                  Problem Statement
+                </h2>
                 <p className="text-amber-100/85 leading-relaxed">
-                  Design an optimized digital circuit or system using HDL (Verilog/VHDL) that solves a complex 
-                  computational problem or implements a novel hardware solution. Your design should demonstrate 
-                  efficiency, scalability, and innovative thinking in areas like cryptography, signal processing, 
-                  neural networks on chip, or advanced communication protocols.
+                  Design an optimized digital circuit or system using HDL (Verilog/VHDL)
+                  that solves a complex computational problem or implements a novel hardware solution.
+                  Your design should demonstrate efficiency, scalability, and innovative thinking in
+                  areas like cryptography, signal processing, neural networks on chip, or advanced communication protocols.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-amber-300 mb-4">Requirements</h3>
+                <h3 className="text-2xl font-bold text-amber-300 mb-4">
+                  Requirements
+                </h3>
                 <ul className="text-amber-100/85 space-y-3">
                   <li className="flex items-start gap-3">
                     <span className="text-jp-yellow">✓</span>
@@ -71,7 +77,9 @@ export default function VLSITrack() {
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-amber-300 mb-4">Judging Criteria</h3>
+                <h3 className="text-2xl font-bold text-amber-300 mb-4">
+                  Judging Criteria
+                </h3>
                 <ul className="text-amber-100/85 space-y-2">
                   <li>• Innovation & Design (25%)</li>
                   <li>• Technical Execution (25%)</li>
@@ -86,6 +94,7 @@ export default function VLSITrack() {
               >
                 Back to Tracks
               </Link>
+
             </div>
 
             {/* Image Placeholder */}
@@ -95,9 +104,10 @@ export default function VLSITrack() {
                 <p className="text-amber-100/60">Add your VLSI track background image here</p>
               </div>
             </div>
+
           </div>
         </div>
       </section>
     </main>
   )
-}
+};

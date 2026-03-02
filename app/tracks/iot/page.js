@@ -18,7 +18,8 @@ export default function IoTTrack() {
           </p>
           <h1 className="heading mb-8">IOT TRACK</h1>
           <p className="text-amber-100/90 text-base md:text-lg mb-8">
-            Build smart connected devices and solutions that shape the future of IoT
+            Build smart connected devices and solutions. Explore sensors, microcontrollers,
+            and wireless communication to create the future of connected systems.
           </p>
         </div>
       </section>
@@ -42,18 +43,24 @@ export default function IoTTrack() {
 
             {/* Content */}
             <div className="space-y-6">
+              
               <div>
-                <h2 className="text-3xl font-bold text-amber-300 mb-4">Problem Statement</h2>
+                <h2 className="text-3xl font-bold text-amber-300 mb-4">
+                  Problem Statement
+                </h2>
                 <p className="text-amber-100/85 leading-relaxed">
-                  Design and develop an innovative IoT solution that solves a real-world problem using sensors, 
-                  microcontrollers, cloud connectivity, and data analytics. Your solution should demonstrate 
-                  practical applications in domains such as smart homes, industrial automation, healthcare monitoring, 
-                  environmental sensing, or agricultural technology.
+                  Design and develop an innovative IoT solution that solves a real-world problem
+                  using sensors, microcontrollers, cloud connectivity, and data analytics.
+                  Your solution should demonstrate practical applications in domains such as
+                  smart homes, industrial automation, healthcare monitoring, environmental sensing,
+                  or agricultural technology.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-amber-300 mb-4">Requirements</h3>
+                <h3 className="text-2xl font-bold text-amber-300 mb-4">
+                  Requirements
+                </h3>
                 <ul className="text-amber-100/85 space-y-3">
                   <li className="flex items-start gap-3">
                     <span className="text-jp-yellow">✓</span>
@@ -79,7 +86,9 @@ export default function IoTTrack() {
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-amber-300 mb-4">Judging Criteria</h3>
+                <h3 className="text-2xl font-bold text-amber-300 mb-4">
+                  Judging Criteria
+                </h3>
                 <ul className="text-amber-100/85 space-y-2">
                   <li>• Innovation & Creativity (25%)</li>
                   <li>• Technical Implementation (25%)</li>
@@ -94,10 +103,11 @@ export default function IoTTrack() {
               >
                 Back to Tracks
               </Link>
+
             </div>
           </div>
         </div>
       </section>
     </main>
   )
-}
+};
