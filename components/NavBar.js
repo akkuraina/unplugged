@@ -2,31 +2,30 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { UNSTOP_REGISTER_URL } from "@/lib/constants";
 
 const NAV_LINKS = [
+  { name: "Home", href: "#" },
   { name: "About", href: "#about" },
-  { name: "Tracks", href: "#tracks" },
-  { name: "Evaluation", href: "#evaluation" },
+  { name: "Problem Statement", href: "#tracks" },
+  { name: "Prize Pool", href: "#prizepool" },
   { name: "Timeline", href: "#timeline" },
   { name: "FAQ", href: "#faq" },
-  { name: "Register", href: UNSTOP_REGISTER_URL, external: true },
 ];
 
 export default function NavBar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full">
-      <nav className="flex items-center justify-between w-full min-h-[100px] px-8 md:px-12 lg:px-16 bg-gradient-to-b from-black/70 to-transparent backdrop-blur-sm">
+      <nav className="flex items-center justify-center w-full min-h-[100px] px-5 md:px-8 lg:px-10 bg-gradient-to-b from-black/70 to-transparent backdrop-blur-sm">
         
-        {/* Left: IETE + IIC + MicroMinds Logos */}
-        <div className="flex items-center gap-6 md:gap-10 shrink-0">
+        {/* Left: IETE + IIC + MicroMinds Logos
+        <div className="flex items-center gap-4 md:gap-6 shrink-0">
           <Link href="https://djsceietesf.wordpress.com/" target="_blank">
             <Image
               src="/iete.png"
               alt="IETE Logo"
-              width={140}
+              width={200}
               height={56}
-              className="object-contain h-14 md:h-16 w-auto"
+              className="object-contain h-14 md:h-16 w-[20px] md:w-[24px] brightness-125"
               priority
             />
           </Link>
@@ -35,9 +34,9 @@ export default function NavBar() {
             <Image
               src="/iic.png"
               alt="IIC Logo"
-              width={140}
+              width={190}
               height={56}
-              className="object-contain h-14 md:h-16 w-auto"
+              className="object-contain h-14 md:h-16 w-[19px] md:w-[23px] brightness-125"
             />
           </Link>
 
@@ -45,12 +44,12 @@ export default function NavBar() {
             <Image
               src="/microminds.png"
               alt="MicroMinds Logo"
-              width={140}
+              width={190}
               height={56}
-              className="object-contain h-14 md:h-16 w-auto"
+              className="object-contain h-14 md:h-16 w-[19px] md:w-[23px] brightness-125"
             />
           </Link>
-        </div>
+        </div> */}
 
         {/* Right: Nav Links */}
         <div className="flex items-center nav-links-spacing">
@@ -61,7 +60,7 @@ export default function NavBar() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-amber-100 hover:text-amber-400 font-medium tracking-wide transition-colors text-sm md:text-base py-3 px-5 md:px-6 rounded-lg hover:bg-amber-950/30 whitespace-nowrap"
+                className="text-amber-100 hover:text-amber-400 font-medium tracking-wide transition-colors text-sm md:text-base py-3 px-3 md:px-4 rounded-lg hover:bg-amber-950/30 whitespace-nowrap"
               >
                 {link.name}
               </a>
@@ -69,7 +68,7 @@ export default function NavBar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-amber-100 hover:text-amber-400 font-medium tracking-wide transition-colors text-sm md:text-base py-3 px-5 md:px-6 rounded-lg hover:bg-amber-950/30 whitespace-nowrap"
+                className="text-amber-100 hover:text-amber-400 font-medium tracking-wide transition-colors text-sm md:text-base py-3 px-3 md:px-4 rounded-lg hover:bg-amber-950/30 whitespace-nowrap"
               >
                 {link.name}
               </a>
@@ -77,7 +76,7 @@ export default function NavBar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-amber-100 hover:text-amber-400 font-medium tracking-wide transition-colors text-sm md:text-base py-3 px-5 md:px-6 rounded-lg hover:bg-amber-950/30 whitespace-nowrap"
+                className="text-amber-100 hover:text-amber-400 font-medium tracking-wide transition-colors text-sm md:text-base py-3 px-3 md:px-4 rounded-lg hover:bg-amber-950/30 whitespace-nowrap"
               >
                 {link.name}
               </Link>

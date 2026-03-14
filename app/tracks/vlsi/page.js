@@ -2,97 +2,66 @@
 import NavBar from '@/components/NavBar'
 import Link from 'next/link'
 
-export default function VLSITrack() {
+export default function VlsiTrackPage() {
   return (
     <main className="relative">
       <NavBar />
 
-      {/* Hero Section */}
-      <section 
-        className="min-h-screen flex items-center justify-center px-4 relative py-24"
-        style={{ backgroundImage: "url('/night.png')" }}>
+      <section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center py-24 scroll-mt-20">
+        <div
+          className="absolute inset-0 bg-center bg-cover bg-no-repeat"
+          style={{ backgroundImage: "url('/hero.png')" }}
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/75 to-black/85" />
-        <div className="relative z-10 text-center max-w-4xl">
-          <p className="text-amber-400/80 text-sm md:text-base font-semibold tracking-widest mb-4 uppercase">
-            Very Large Scale Integration
-          </p>
-          <h1 className="heading mb-8">VLSI TRACK</h1>
-          <p className="text-amber-100/90 text-base md:text-lg mb-8">
-            Design cutting-edge digital systems and optimize silicon at scale
-          </p>
-        </div>
-      </section>
 
-      {/* Problem Statement Section */}
-      <section 
-        className="relative min-h-screen flex items-center justify-center py-24"
-        style={{ backgroundImage: "url('/night.png')" }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/75 to-black/85" />
-        
-        <div className="relative z-10 w-full max-w-5xl px-6 mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            
-            {/* Content */}
-            <div className="space-y-6">
-              <div>
-                <h2 className="text-3xl font-bold text-amber-300 mb-4">Problem Statement</h2>
-                <p className="text-amber-100/85 leading-relaxed">
-                  Design an optimized digital circuit or system using HDL (Verilog/VHDL) that solves a complex 
-                  computational problem or implements a novel hardware solution. Your design should demonstrate 
-                  efficiency, scalability, and innovative thinking in areas like cryptography, signal processing, 
-                  neural networks on chip, or advanced communication protocols.
-                </p>
-              </div>
+        <div className="relative z-20 w-full max-w-6xl px-6 mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-amber-400/80 text-sm md:text-base font-semibold tracking-widest mb-4 uppercase">
+              Verilog / VHDL
+            </p>
+            <h1 className="heading mb-6">Problem Statement</h1>
+          </div>
+
+          <div className="glass rounded-2xl border border-amber-500/40 overflow-hidden">
+            <div
+              className="h-56 md:h-72 bg-center bg-cover bg-no-repeat"
+              style={{ backgroundImage: "url('/vlsi.png')", backgroundColor: '#1a1a1a' }}
+            />
+            <div className="p-8 md:p-10 space-y-7">
+              <p className="text-amber-100/90 text-base md:text-lg leading-relaxed">
+                In a wildlife conservation system, remote camera traps continuously capture fixed-size grayscale image blocks (each pixel represented by an 8-bit unsigned value). Due to repeated triggers and environmental variations, a significant lot of captured images are visually similar.
+              </p>
 
               <div>
-                <h3 className="text-2xl font-bold text-amber-300 mb-4">Requirements</h3>
-                <ul className="text-amber-100/85 space-y-3">
-                  <li className="flex items-start gap-3">
-                    <span className="text-jp-yellow">✓</span>
-                    <span>HDL implementation (Verilog/VHDL) with testbench</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-jp-yellow">✓</span>
-                    <span>Simulation and synthesis results</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-jp-yellow">✓</span>
-                    <span>FPGA implementation or detailed circuit design</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-jp-yellow">✓</span>
-                    <span>Performance metrics and optimization analysis</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-jp-yellow">✓</span>
-                    <span>Complete documentation with schematics and methodology</span>
-                  </li>
+                <h2 className="text-2xl font-bold text-amber-300 mb-3">Design Requirements</h2>
+                <ul className="text-amber-100/85 leading-relaxed list-disc pl-5 space-y-1">
+                  <li>Generate a 64-bit image signature from input intensity characteristics.</li>
+                  <li>Ensure visually similar images produce similar signatures.</li>
+                  <li>Compare two signatures and determine duplicate status.</li>
+                  <li>Output duplicate signal when similarity exceeds a configurable threshold.</li>
+                  <li>Design must be synthesizable and suitable for real-time embedded deployment.</li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-amber-300 mb-4">Judging Criteria</h3>
-                <ul className="text-amber-100/85 space-y-2">
-                  <li>• Innovation & Design (25%)</li>
-                  <li>• Technical Execution (25%)</li>
-                  <li>• Performance & Optimization (25%)</li>
-                  <li>• Presentation & Documentation (25%)</li>
+                <h2 className="text-2xl font-bold text-amber-300 mb-3">Deliverables</h2>
+                <ul className="text-amber-100/85 leading-relaxed list-disc pl-5 space-y-1">
+                  <li>Verilog source code</li>
+                  <li>Testbench</li>
+                  <li>Simulation waveform screenshot</li>
+                  <li>Short design explanation (video/report)</li>
                 </ul>
               </div>
 
-              <Link
-                href="/#tracks"
-                className="inline-block jurassic-btn mt-6"
-              >
-                Back to Tracks
-              </Link>
-            </div>
+              <div>
+                <h2 className="text-2xl font-bold text-amber-300 mb-3">Component</h2>
+                <p className="text-amber-100/85 leading-relaxed">Digilent Basys 3 Artix-7 FPGA</p>
+              </div>
 
-            {/* Image Placeholder */}
-            <div className="glass rounded-2xl h-96 flex items-center justify-center p-8">
-              <div className="text-center">
-                <p className="text-amber-400 text-lg font-semibold mb-4">Track Image</p>
-                <p className="text-amber-100/60">Add your VLSI track background image here</p>
+              <div className="pt-2">
+                <Link href="/#tracks" className="inline-block jurassic-btn">
+                  Back to Problem Statements
+                </Link>
               </div>
             </div>
           </div>

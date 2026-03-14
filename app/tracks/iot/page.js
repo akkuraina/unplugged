@@ -2,98 +2,81 @@
 import NavBar from '@/components/NavBar'
 import Link from 'next/link'
 
-export default function IoTTrack() {
+export default function IoTTrackPage() {
   return (
     <main className="relative">
       <NavBar />
 
-      {/* Hero Section */}
-      <section 
-        className="min-h-screen flex items-center justify-center px-4 relative py-24"
-        style={{ backgroundImage: "url('/night.png')" }}>
+      <section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center py-24 scroll-mt-20">
+        <div
+          className="absolute inset-0 bg-center bg-cover bg-no-repeat"
+          style={{ backgroundImage: "url('/hero.png')" }}
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/75 to-black/85" />
-        <div className="relative z-10 text-center max-w-4xl">
-          <p className="text-amber-400/80 text-sm md:text-base font-semibold tracking-widest mb-4 uppercase">
-            Internet of Things
-          </p>
-          <h1 className="heading mb-8">IOT TRACK</h1>
-          <p className="text-amber-100/90 text-base md:text-lg mb-8">
-            Build smart connected devices and solutions that shape the future of IoT
-          </p>
-        </div>
-      </section>
 
-      {/* Problem Statement Section */}
-      <section 
-        className="relative min-h-screen flex items-center justify-center py-24"
-        style={{ backgroundImage: "url('/night.png')" }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/75 to-black/85" />
-        
-        <div className="relative z-10 w-full max-w-5xl px-6 mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            
-            {/* Image Placeholder */}
-            <div className="glass rounded-2xl h-96 flex items-center justify-center p-8">
-              <div className="text-center">
-                <p className="text-amber-400 text-lg font-semibold mb-4">Track Image</p>
-                <p className="text-amber-100/60">Add your IoT track background image here</p>
-              </div>
-            </div>
+        <div className="relative z-20 w-full max-w-6xl px-6 mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-amber-400/80 text-sm md:text-base font-semibold tracking-widest mb-4 uppercase">
+              IoT / Embedded
+            </p>
+            <h1 className="heading mb-6">Problem Statement</h1>
+          </div>
 
-            {/* Content */}
-            <div className="space-y-6">
+          <div className="glass rounded-2xl border border-amber-500/40 overflow-hidden">
+            <div
+              className="h-56 md:h-72 bg-center bg-cover bg-no-repeat"
+              style={{ backgroundImage: "url('/iot.png')", backgroundColor: '#1a1a1a' }}
+            />
+            <div className="p-8 md:p-10 space-y-7">
+              <p className="text-amber-100/90 text-base md:text-lg leading-relaxed">
+                Design an integrated IOT-based smart safari management system that enhances wildlife monitoring, visitor experience, operational efficiency, and conservation analytics within a controlled jungle safari ecosystem.
+              </p>
+
               <div>
-                <h2 className="text-3xl font-bold text-amber-300 mb-4">Problem Statement</h2>
+                <h2 className="text-2xl font-bold text-amber-300 mb-3">Compulsory Task</h2>
                 <p className="text-amber-100/85 leading-relaxed">
-                  Design and develop an innovative IoT solution that solves a real-world problem using sensors, 
-                  microcontrollers, cloud connectivity, and data analytics. Your solution should demonstrate 
-                  practical applications in domains such as smart homes, industrial automation, healthcare monitoring, 
-                  environmental sensing, or agricultural technology.
+                  PPT Submission - Concept and System Design. The presentation should clearly communicate innovation, technical depth, and practical implementation strategy. Teams to strictly only refer to the PPT layout attached.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-amber-300 mb-4">Requirements</h3>
-                <ul className="text-amber-100/85 space-y-3">
-                  <li className="flex items-start gap-3">
-                    <span className="text-jp-yellow">✓</span>
-                    <span>Use at least 2 sensors for data collection</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-jp-yellow">✓</span>
-                    <span>Microcontroller-based implementation (Arduino, ESP32, Raspberry Pi, etc.)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-jp-yellow">✓</span>
-                    <span>Cloud integration or local data processing</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-jp-yellow">✓</span>
-                    <span>Real-world applicability and impact demonstration</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-jp-yellow">✓</span>
-                    <span>Documentation with circuit diagrams, code, and usage guide</span>
-                  </li>
-                </ul>
+                <h2 className="text-2xl font-bold text-amber-300 mb-3">Optional Tasks (Choose Any One or Both)</h2>
+                <div className="space-y-5">
+                  <div>
+                    <h3 className="text-xl font-semibold text-jp-yellow mb-2">Task 1: Software Track - Safari Ticketing and Monitoring System</h3>
+                    <ul className="text-amber-100/85 leading-relaxed list-disc pl-5 space-y-1">
+                      <li>Online ticket booking system</li>
+                      <li>Real-time tracking of safari vehicles</li>
+                      <li>Dynamic slot allocation based on active vehicle count</li>
+                      <li>Live dashboard for animals spotted, weather updates, zone activity, and other real-time safari changes</li>
+                      <li>Real-time data may be simulated but must use a real-time database architecture</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold text-jp-yellow mb-2">Task 2: Hardware Track - Animal Detection System</h3>
+                    <ul className="text-amber-100/85 leading-relaxed list-disc pl-5 space-y-1">
+                      <li>Develop and train a computer vision model to detect safari animals</li>
+                      <li>Must use ESP32-CAM and a microcontroller-based system</li>
+                      <li>Raspberry Pi or equivalent boards are strictly prohibited</li>
+                      <li>Should demonstrate real-time or near real-time detection</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-amber-300 mb-4">Judging Criteria</h3>
-                <ul className="text-amber-100/85 space-y-2">
-                  <li>• Innovation & Creativity (25%)</li>
-                  <li>• Technical Implementation (25%)</li>
-                  <li>• Practical Impact (25%)</li>
-                  <li>• Presentation Quality (25%)</li>
-                </ul>
+                <h2 className="text-2xl font-bold text-amber-300 mb-3">Components</h2>
+                <p className="text-amber-100/85 leading-relaxed">
+                  ESP-32, ESP32-CAM Module, RFID Module, Neo-6M (GPS Module), IR Sensor
+                </p>
               </div>
 
-              <Link
-                href="/#tracks"
-                className="inline-block jurassic-btn mt-6"
-              >
-                Back to Tracks
-              </Link>
+              <div className="pt-2">
+                <Link href="/#tracks" className="inline-block jurassic-btn">
+                  Back to Problem Statements
+                </Link>
+              </div>
             </div>
           </div>
         </div>

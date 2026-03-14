@@ -14,30 +14,36 @@ html {
   scroll-behavior: smooth;
   /* Slightly reduce root font-size so rem-based sizes appear a bit smaller */
   font-size: 15px;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
+
+body {
+  min-height: 100vh;
+  background-color: #000;
+  background-image: url('/hero.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 section {
   scroll-margin-top: 100px;
 }
 
 .jp-font {
   font-family: 'Bebas Neue', cursive;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #0a1f0a;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #DC0000;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #FFC500;
 }
 
 /* Custom Component Classes */
@@ -58,3 +64,37 @@ section {
 }
 
 /* Removed site-wide transform scaling to avoid layout gaps/white borders */
+
+/* Live registration badge animations */
+@keyframes live-bounce {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-7px); }
+}
+
+.live-badge {
+  animation: live-bounce 2.2s ease-in-out infinite;
+  display: inline-block;
+}
+
+/* Unplugged Logo Animations */
+@keyframes logo-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 20px rgba(217, 70, 239, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 40px rgba(217, 70, 239, 0.8));
+  }
+}
+
+@keyframes logo-bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.logo-glow-bounce {
+  animation: logo-glow 3s ease-in-out infinite, logo-bounce 3.5s ease-in-out infinite;
+}

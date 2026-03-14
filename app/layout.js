@@ -1,4 +1,5 @@
 import './globals.css'
+import CursorGlow from '@/components/CursorGlow'
 
 export const metadata = {
   title: 'UNPLUGGED 3.0',
@@ -8,7 +9,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <CursorGlow />
+        {children}
+      </body>
     </html>
   )
 }
