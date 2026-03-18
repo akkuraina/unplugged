@@ -9,7 +9,7 @@ export default function Unplugged2() {
 
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 relative bg-center bg-cover bg-no-repeat py-24" 
-        style={{ backgroundImage: "url('/hero.png')" }}>
+        style={{ backgroundImage: "url('/jurrasicpark.png')" }}>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/75 to-black/85" />
         <div className="relative z-10 text-center max-w-4xl">
           <p className="text-amber-400/80 text-sm md:text-base font-semibold tracking-widest mb-4 uppercase">
@@ -26,7 +26,7 @@ export default function Unplugged2() {
       <section className="relative min-h-screen flex items-center justify-center py-24">
         <div
           className="absolute inset-0 bg-center bg-cover bg-no-repeat"
-          style={{ backgroundImage: "url('/hero.png')" }}
+          style={{ backgroundImage: "url('/jurrasicpark.png')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/75 to-black/85" />
         

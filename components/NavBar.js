@@ -60,7 +60,7 @@ export default function NavBar() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-amber-100 hover:text-amber-400 font-medium tracking-wide transition-colors text-sm md:text-base py-3 px-3 md:px-4 rounded-lg hover:bg-amber-950/30 whitespace-nowrap"
+                className="jurassic-nav text-amber-100 hover:text-amber-400 font-medium tracking-wide transition-colors text-sm md:text-base py-3 px-3 md:px-4 rounded-lg hover:bg-amber-950/30 whitespace-nowrap"
               >
                 {link.name}
               </a>
@@ -68,7 +68,7 @@ export default function NavBar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-amber-100 hover:text-amber-400 font-medium tracking-wide transition-colors text-sm md:text-base py-3 px-3 md:px-4 rounded-lg hover:bg-amber-950/30 whitespace-nowrap"
+                className="jurassic-nav text-amber-100 hover:text-amber-400 font-medium tracking-wide transition-colors text-sm md:text-base py-3 px-3 md:px-4 rounded-lg hover:bg-amber-950/30 whitespace-nowrap"
               >
                 {link.name}
               </a>
@@ -76,7 +76,7 @@ export default function NavBar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-amber-100 hover:text-amber-400 font-medium tracking-wide transition-colors text-sm md:text-base py-3 px-3 md:px-4 rounded-lg hover:bg-amber-950/30 whitespace-nowrap"
+                className="jurassic-nav text-amber-100 hover:text-amber-400 font-medium tracking-wide transition-colors text-sm md:text-base py-3 px-3 md:px-4 rounded-lg hover:bg-amber-950/30 whitespace-nowrap"
               >
                 {link.name}
               </Link>

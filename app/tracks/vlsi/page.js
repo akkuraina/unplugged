@@ -10,7 +10,7 @@ export default function VlsiTrackPage() {
       <section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center py-24 scroll-mt-20">
         <div
           className="absolute inset-0 bg-center bg-cover bg-no-repeat"
-          style={{ backgroundImage: "url('/hero.png')" }}
+          style={{ backgroundImage: "url('/jurrasicpark.png')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/75 to-black/85" />
 

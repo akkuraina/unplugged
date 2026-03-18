@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;700&family=Oswald:wght@300;400;600;700&family=Roboto+Condensed:wght@300;400;700&family=Russo+One&family=Permanent+Marker&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -22,7 +22,7 @@ html {
 body {
   min-height: 100vh;
   background-color: #000;
-  background-image: url('/hero.png');
+  /* background-image: url('/hero.png'); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -97,4 +97,590 @@ section {
 
 .logo-glow-bounce {
   animation: logo-glow 3s ease-in-out infinite, logo-bounce 3.5s ease-in-out infinite;
+}
+
+/* Jurassic Park Inspired Typography System */
+:root {
+  --font-jurassic-heading: 'Bebas Neue', 'Impact', sans-serif;
+  --font-jurassic-body: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+  --font-jurassic-accent: 'Russo One', 'Permanent Marker', cursive;
+  
+  /* Jurassic Park Color Palette */
+  --jp-gold: #FFD700;
+  --jp-amber: #FFC107;
+  --jp-orange: #FF8C00;
+  --jp-red: #D32F2F;
+  --jp-dark: #1A1A1A;
+  --jp-stone: #8B7355;
+  --jp-moss: #556B2F;
+  
+  /* Text Shadow Effects */
+  --text-shadow-jurassic: 
+    0px 2px 4px rgba(0,0,0,0.8),
+    0px 4px 8px rgba(255,215,0,0.4),
+    0px 6px 12px rgba(255,140,0,0.2),
+    2px 2px 0px rgba(0,0,0,0.3);
+    
+  --text-shadow-glow: 
+    0 0 10px rgba(255,215,0,0.5),
+    0 0 20px rgba(255,193,7,0.3),
+    0 0 30px rgba(255,140,0,0.2);
+    
+  --text-shadow-emboss: 
+    0px 1px 0px rgba(255,255,255,0.3),
+    0px 2px 0px rgba(0,0,0,0.5),
+    0px 3px 0px rgba(0,0,0,0.8);
+}
+
+body {
+  font-family: var(--font-jurassic-body);
+}
+
+/* Jurassic Heading Styles */
+.jurassic-heading {
+  font-family: var(--font-jurassic-heading);
+  font-weight: 700;
+  font-size: clamp(3rem, 8vw, 5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 0.9;
+  color: var(--jp-gold);
+  text-shadow: var(--text-shadow-jurassic);
+  position: relative;
+}
+
+/* Cinematic Subheadings */
+.jurassic-subheading {
+  font-family: var(--font-jurassic-heading);
+  font-weight: 600;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--jp-amber);
+  text-shadow: 
+    0 2px 4px rgba(0,0,0,0.6),
+    0 4px 8px rgba(255,215,0,0.3);
+}
+
+/* Accent Text for Special Elements */
+.jurassic-accent {
+  font-family: var(--font-jurassic-accent);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--jp-gold);
+  text-shadow: var(--text-shadow-glow);
+}
+
+/* Glowing Prize Text */
+.jurassic-prize {
+  font-family: var(--font-jurassic-heading);
+  font-weight: 700;
+  font-size: clamp(3rem, 7vw, 4.5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: linear-gradient(90deg, var(--jp-gold), var(--jp-amber), var(--jp-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: var(--text-shadow-glow);
+  animation: jurassic-glow 2s ease-in-out infinite alternate;
+}
+
+/* Body Text with Prehistoric Feel */
+.jurassic-body {
+  font-family: var(--font-jurassic-body);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  color: #D4D4D4;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Navigation Typography */
+.jurassic-nav {
+  font-family: var(--font-jurassic-heading);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--jp-gold);
+  text-shadow: var(--text-shadow-emboss);
+}
+
+/* Button Typography */
+.jurassic-button {
+  font-family: var(--font-jurassic-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  text-shadow: 
+    0 2px 4px rgba(0,0,0,0.8),
+    0 4px 8px rgba(255,215,0,0.4);
+  transition: all 0.3s ease;
+}
+
+.jurassic-button:hover {
+  color: var(--jp-gold);
+  text-shadow: var(--text-shadow-glow);
+  transform: translateY(-2px);
+}
+
+/* Animated Glow Effect */
+@keyframes jurassic-glow {
+  0% {
+    filter: brightness(1) drop-shadow(0 0 10px rgba(255,215,0,0.5));
+  }
+  100% {
+    filter: brightness(1.2) drop-shadow(0 0 20px rgba(255,193,7,0.3));
+  }
+}
+
+/* Distressed Text Effect */
+.jurassic-distressed {
+  font-family: var(--font-jurassic-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--jp-gold);
+  text-shadow: var(--text-shadow-jurassic);
+  position: relative;
+}
+
+.jurassic-distressed::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  z-index: -1;
+  color: rgba(139,115,85,0.3);
+  clip-path: polygon(0 0, 100% 0, 95% 50%, 100% 100%, 0 100%);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .jurassic-heading {
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: 0.03em;
+  }
+  
+  .jurassic-subheading {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    letter-spacing: 0.05em;
+  }
+  
+  .jurassic-body {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  }
+}
+
+/* Loading Animation */
+@keyframes jurassic-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.jurassic-reveal {
+  animation: jurassic-reveal 1s ease-out forwards;
+}
+
+/* Special Effects for Important Text */
+.jurassic-warning {
+  font-family: var(--font-jurassic-accent);
+  color: var(--jp-red);
+  text-shadow: 
+    0 0 10px rgba(255,140,0,0.8),
+    0 0 20px rgba(255,140,0,0.4);
+  animation: jurassic-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes jurassic-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Animated Leaves Background */
+.jurassic-leaves {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.leaf {
+  position: absolute;
+  background: linear-gradient(135deg, #2d5016, #4a7c28, #6fa34d);
+  border-radius: 0 100% 0 100%;
+  opacity: 0.7;
+  animation: leaf-fall linear infinite;
+}
+
+.leaf::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 60%;
+  background: rgba(46, 80, 22, 0.6);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.leaf-1 {
+  width: 25px;
+  height: 30px;
+  left: 10%;
+  animation-duration: 15s;
+  animation-delay: 0s;
+}
+
+.leaf-2 {
+  width: 20px;
+  height: 25px;
+  left: 30%;
+  animation-duration: 18s;
+  animation-delay: 2s;
+}
+
+.leaf-3 {
+  width: 30px;
+  height: 35px;
+  left: 50%;
+  animation-duration: 20s;
+  animation-delay: 4s;
+}
+
+.leaf-4 {
+  width: 22px;
+  height: 28px;
+  left: 70%;
+  animation-duration: 16s;
+  animation-delay: 6s;
+}
+
+.leaf-5 {
+  width: 28px;
+  height: 32px;
+  left: 90%;
+  animation-duration: 22s;
+  animation-delay: 8s;
+}
+
+.leaf-6 {
+  width: 18px;
+  height: 22px;
+  left: 15%;
+  animation-duration: 17s;
+  animation-delay: 10s;
+}
+
+.leaf-7 {
+  width: 24px;
+  height: 29px;
+  left: 35%;
+  animation-duration: 19s;
+  animation-delay: 12s;
+}
+
+.leaf-8 {
+  width: 26px;
+  height: 31px;
+  left: 55%;
+  animation-duration: 21s;
+  animation-delay: 14s;
+}
+
+.leaf-9 {
+  width: 21px;
+  height: 26px;
+  left: 75%;
+  animation-duration: 23s;
+  animation-delay: 16s;
+}
+
+.leaf-10 {
+  width: 27px;
+  height: 33px;
+  left: 85%;
+  animation-duration: 24s;
+  animation-delay: 18s;
+}
+
+@keyframes leaf-fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg) translateX(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(calc(100vh + 100px)) rotate(360deg) translateX(50px);
+    opacity: 0;
+  }
+}
+
+/* Floating animation for additional movement */
+@keyframes leaf-float {
+  0%, 100% {
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateX(20px) translateY(-10px) rotate(90deg);
+  }
+  50% {
+    transform: translateX(-10px) translateY(5px) rotate(180deg);
+  }
+  75% {
+    transform: translateX(15px) translateY(-5px) rotate(270deg);
+  }
+}
+
+/* Additional small leaves for depth */
+.small-leaf {
+  position: absolute;
+  background: linear-gradient(135deg, #3a5f1f, #5a8c3a, #7fb354);
+  border-radius: 0 100% 0 100%;
+  opacity: 0.5;
+  animation: small-leaf-float linear infinite;
+}
+
+.small-leaf-1 {
+  width: 12px;
+  height: 15px;
+  left: 5%;
+  animation-duration: 12s;
+  animation-delay: 1s;
+}
+
+.small-leaf-2 {
+  width: 10px;
+  height: 12px;
+  left: 25%;
+  animation-duration: 14s;
+  animation-delay: 3s;
+}
+
+.small-leaf-3 {
+  width: 14px;
+  height: 17px;
+  left: 45%;
+  animation-duration: 13s;
+  animation-delay: 5s;
+}
+
+.small-leaf-4 {
+  width: 11px;
+  height: 14px;
+  left: 65%;
+  animation-duration: 15s;
+  animation-delay: 7s;
+}
+
+.small-leaf-5 {
+  width: 13px;
+  height: 16px;
+  left: 85%;
+  animation-duration: 11s;
+  animation-delay: 9s;
+}
+
+@keyframes small-leaf-float {
+  0% {
+    transform: translateY(-50px) rotate(0deg) translateX(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(calc(100vh + 50px)) rotate(720deg) translateX(30px);
+    opacity: 0;
+  }
+}
+
+/* Jurassic Heading Styles */
+.jurassic-heading {
+  font-family: var(--font-jurassic-heading);
+  font-weight: 700;
+  font-size: clamp(3rem, 8vw, 5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 0.9;
+  color: var(--jp-gold);
+  text-shadow: var(--text-shadow-jurassic);
+  position: relative;
+}
+
+/* Cinematic Subheadings */
+.jurassic-subheading {
+  font-family: var(--font-jurassic-heading);
+  font-weight: 600;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--jp-amber);
+  text-shadow: 
+    0 2px 4px rgba(0,0,0,0.6),
+    0 4px 8px rgba(255,215,0,0.3);
+}
+
+/* Accent Text for Special Elements */
+.jurassic-accent {
+  font-family: var(--font-jurassic-accent);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--jp-gold);
+  text-shadow: var(--text-shadow-glow);
+}
+
+/* Glowing Prize Text */
+.jurassic-prize {
+  font-family: var(--font-jurassic-heading);
+  font-weight: 700;
+  font-size: clamp(3rem, 7vw, 4.5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: linear-gradient(90deg, var(--jp-gold), var(--jp-amber), var(--jp-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: var(--text-shadow-glow);
+  animation: jurassic-glow 2s ease-in-out infinite alternate;
+}
+
+/* Body Text with Prehistoric Feel */
+.jurassic-body {
+  font-family: var(--font-jurassic-body);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  color: #D4D4D4;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Navigation Typography */
+.jurassic-nav {
+  font-family: var(--font-jurassic-heading);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--jp-gold);
+  text-shadow: var(--text-shadow-emboss);
+}
+
+/* Button Typography */
+.jurassic-button {
+  font-family: var(--font-jurassic-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  text-shadow: 
+    0 2px 4px rgba(0,0,0,0.8),
+    0 4px 8px rgba(255,215,0,0.4);
+  transition: all 0.3s ease;
+}
+
+.jurassic-button:hover {
+  color: var(--jp-gold);
+  text-shadow: var(--text-shadow-glow);
+  transform: translateY(-2px);
+}
+
+/* Animated Glow Effect */
+@keyframes jurassic-glow {
+  0% {
+    filter: brightness(1) drop-shadow(0 0 10px rgba(255,215,0,0.5));
+  }
+  100% {
+    filter: brightness(1.2) drop-shadow(0 0 20px rgba(255,193,7,0.3));
+  }
+}
+
+/* Distressed Text Effect */
+.jurassic-distressed {
+  font-family: var(--font-jurassic-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--jp-gold);
+  text-shadow: var(--text-shadow-jurassic);
+  position: relative;
+}
+
+.jurassic-distressed::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  z-index: -1;
+  color: rgba(139,115,85,0.3);
+  clip-path: polygon(0 0, 100% 0, 95% 50%, 100% 100%, 0 100%);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .jurassic-heading {
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: 0.03em;
+  }
+  
+  .jurassic-subheading {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    letter-spacing: 0.05em;
+  }
+  
+  .jurassic-body {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  }
+}
+
+/* Loading Animation */
+@keyframes jurassic-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.jurassic-reveal {
+  animation: jurassic-reveal 1s ease-out forwards;
+}
+
+/* Special Effects for Important Text */
+.jurassic-warning {
+  font-family: var(--font-jurassic-accent);
+  color: var(--jp-red);
+  text-shadow: 
+    0 0 10px rgba(255,140,0,0.8),
+    0 0 20px rgba(255,140,0,0.4);
+  animation: jurassic-pulse 1.5s ease-in-out infinite;
 }

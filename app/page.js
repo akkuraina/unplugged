@@ -4,23 +4,56 @@ import NavBar from '@/components/NavBar'
 import { faq } from '@/app/data/faq'
 import FaqCategory from '@/components/FaqCategory'
 import Link from 'next/link'
+import ScrollAnimation from '@/components/ScrollAnimation'
+import CustomCursor from '@/components/CustomCursor'
+import JurassicLeaves from '@/components/JurassicLeaves'
 
 export default function Home() {
   return (
     <main className="relative">
+      <JurassicLeaves />
+      <ScrollAnimation />
+      <CustomCursor />
       <NavBar />
       {/* ── Hero ── */}
       <section
-        className="h-screen flex items-center justify-center px-4 relative bg-center bg-cover bg-no-repeat overflow-hidden pt-[104px]"
-        style={{ backgroundImage: "url('/hero.png')" }}
+        className="h-screen flex items-center justify-center px-4 relative overflow-hidden pt-[104px]"
       >
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 w-full max-w-4xl mx-auto h-screen flex flex-col items-center justify-center text-center">
 
-        <div className="relative z-10 w-full max-w-4xl mx-auto h-[calc(100vh-104px)] flex flex-col items-center justify-between text-center py-8">
+          {/* Unplugged Logo */}
+          <div className="logo-glow-bounce">
+            <Image
+              src="/unpluggedlogo.png"
+              alt="Unplugged Logo"
+              width={800}
+              height={400}
+              className="w-[600px] md:w-[800px] h-auto max-h-[80vh] object-contain"
+              priority
+            />
+          </div>
+
+          {/* Registration button */}
+          <div className="absolute bottom-20 flex flex-col items-center gap-4">
+            <a
+              href="https://unstop.com/hackathons/unplugged-a-24-hour-hardware-hackathon-shri-vile-parle-kelavani-mandals-dwarkadas-j-sanghvi-college-of-engine-1655514"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="jurassic-button group relative inline-flex items-center gap-3 px-6 md:px-7 py-2 md:py-2.5 rounded-full border border-red-500/60 bg-black/55 backdrop-blur-sm font-semibold text-xs md:text-sm transition-all duration-300 hover:scale-105 hover:border-red-400 hover:shadow-[0_0_30px_10px_rgba(239,68,68,0.55)]"
+            >
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75" />
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-red-600" />
+              </span>
+              <span className="jurassic-button group-hover:text-amber-300">
+                Registrations are live!
+              </span>
+            </a>
+          </div>
 
           {/* Top Section: IETE X MicroMinds + Proudly Presents */}
-          <div className="flex flex-col items-center gap-2 flex-shrink-0">
-            <div className="flex items-center gap-6 md:gap-10">
+          <div className="absolute top-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2">
+            <div className="flex items-center gap-2">
               <Image
                 src="/iete.png"
                 alt="IETE Logo"
@@ -28,7 +61,7 @@ export default function Home() {
                 height={60}
                 className="w-12 md:w-16 h-auto object-contain"
               />
-              <span className="text-amber-300 text-2xl md:text-3xl font-bold">×</span>
+              <span className="jurassic-nav text-2xl md:text-3xl font-bold">×</span>
               <Image
                 src="/microminds.png"
                 alt="MicroMinds Logo"
@@ -37,43 +70,13 @@ export default function Home() {
                 className="w-12 md:w-16 h-auto object-contain"
               />
             </div>
-            <p className="text-amber-300/90 text-xs md:text-sm font-semibold tracking-widest uppercase mt-1">
+            <p className="jurassic-nav text-xs md:text-sm font-semibold tracking-widest uppercase">
               Proudly Presents
             </p>
           </div>
 
-          {/* Unplugged Logo */}
-          <div className="logo-glow-bounce flex-shrink-0">
-            <Image
-              src="/unpluggedlogo.png"
-              alt="Unplugged Logo"
-              width={600}
-              height={300}
-              className="w-[380px] md:w-[580px] h-auto max-h-[50vh] object-contain"
-              priority
-            />
-          </div>
-
-          {/* Bottom Section: Registration button only */}
-          <div className="flex flex-col items-center gap-6 flex-shrink-0">
-            <a
-              href="https://unstop.com/hackathons/unplugged-a-24-hour-hardware-hackathon-shri-vile-parle-kelavani-mandals-dwarkadas-j-sanghvi-college-of-engine-1655514"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative inline-flex items-center gap-3 px-6 md:px-7 py-2 md:py-2.5 rounded-full border border-red-500/60 bg-black/55 backdrop-blur-sm text-white font-semibold text-xs md:text-sm transition-all duration-300 hover:scale-105 hover:border-red-400 hover:shadow-[0_0_30px_10px_rgba(239,68,68,0.55)]"
-            >
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75" />
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-red-600" />
-              </span>
-              <span className="text-red-400 group-hover:text-red-300">
-                Registrations are live!
-              </span>
-            </a>
-          </div>
-
           {/* Maven - absolute bottom left */}
-          <div className="absolute bottom-6 left-6 z-20 flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110">
+          <div className="absolute bottom-8 left-8 z-20 flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110">
             <Image
               src="/maven.png"
               alt="Maven Silicon"
@@ -85,7 +88,7 @@ export default function Home() {
           </div>
 
           {/* Unstop - absolute bottom right */}
-          <div className="absolute bottom-6 right-6 z-20 flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110">
+          <div className="absolute bottom-8 right-8 z-20 flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110">
             <Image
               src="/unstop.png"
               alt="Unstop"
@@ -102,37 +105,32 @@ export default function Home() {
         id="about"
         className="relative min-h-screen w-full overflow-hidden flex items-center justify-center py-24 scroll-mt-20"
       >
-        <div
-          className="absolute inset-0 bg-center bg-cover bg-no-repeat"
-          style={{ backgroundImage: "url('/hero.png')" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/75 to-black/85" />
 
         <div className="relative z-20 w-full max-w-5xl px-6 mx-auto">
           <div className="text-center mb-16">
-            <h2 className="heading mb-8">About Unplugged</h2>
-            <p className="text-amber-100/90 max-w-3xl mx-auto text-base md:text-lg leading-relaxed">
-              Unplugged is a 24 hour hardware hackathon, birthed by DJSCE IETE-ISF in the year 2024. As we embark on our third edition, we join hands with DJS Microminds, a brand new VLSI club of our department. We invite you to explore the wild with us!
+            <h2 className="jurassic-heading jurassic-reveal mb-8" data-text="ABOUT UNPLUGGED">About Unplugged</h2>
+            <p className="jurassic-body max-w-3xl mx-auto text-base md:text-lg leading-relaxed">
+              Unplugged is a 24 hour hardware hackathon, birthed by DJSCE IETE-ISF in year 2024. As we embark on our third edition, we join hands with DJS Microminds, a brand new VLSI club of our department. We invite you to explore the wild with us!
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div className="glass rounded-xl p-8 text-center">
-              <h3 className="text-xl font-bold text-amber-300 mb-4">DJSCE IETE-ISF</h3>
-              <p className="text-amber-100/85 leading-relaxed">
+              <h3 className="jurassic-subheading mb-4">DJSCE IETE-ISF</h3>
+              <p className="jurassic-body leading-relaxed">
                 Welcome to the IETE Students&apos; Forum at D.J. Sanghvi College of Engineering, a beacon of educational excellence and innovation since 2005. Here, we go beyond academics to provide a holistic learning experience enriched with dynamic extra-curricular activities. Over the years, our forum has been the birthplace of impactful events and transformative experiences — hosting Unplugged, a thrilling hardware hackathon unique in its kind, alongside sessions on drone flying, MATLAB, VLSI, armed forces, PLC, and many more to come.
               </p>
             </div>
             <div className="glass rounded-xl p-8 text-center">
-              <h3 className="text-xl font-bold text-amber-300 mb-4">DJS Microminds</h3>
-              <p className="text-amber-100/85 leading-relaxed">
+              <h3 className="jurassic-subheading mb-4">DJS Microminds</h3>
+              <p className="jurassic-body leading-relaxed">
                 Welcome to DJS Microminds, the VLSI and Semiconductor Design community of DJ Sanghvi College of Engineering. Established in its inaugural tenure with a clear and ambitious vision — to build a strong, student-driven ecosystem focused on chip design, RTL development, and hardware innovation. Microminds emphasizes strong fundamentals in digital design with hands-on exposure through FPGA-based implementation and real-world VLSI workflows. True learning happens when theory meets silicon.
               </p>
             </div>
           </div>
 
           <div className="mb-8">
-            <h3 className="text-2xl font-bold text-amber-300 text-center mb-12">Journey Through Unplugged</h3>
+            <h3 className="jurassic-subheading text-center mb-12" data-text="JOURNEY THROUGH UNPLUGGED">Journey Through Unplugged</h3>
             <div className="grid md:grid-cols-2 gap-8">
               <Link
                 href="/unplugged-1"
@@ -145,9 +143,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/10" />
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_0_2px_rgba(245,158,11,0.5)]" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-8">
-                  <h4 className="text-4xl font-bold jp-font text-jp-yellow mb-2 group-hover:text-amber-300 transition-colors">
-                    UNPLUGGED 1.0
-                  </h4>
+                  <h4 className="jurassic-accent mb-2" data-text="UNPLUGGED 1.0">UNPLUGGED 1.0</h4>
                 </div>
               </Link>
 
@@ -162,9 +158,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/10" />
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_0_2px_rgba(245,158,11,0.5)]" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-8">
-                  <h4 className="text-4xl font-bold jp-font text-jp-yellow mb-2 group-hover:text-amber-300 transition-colors">
-                    UNPLUGGED 2.0
-                  </h4>
+                  <h4 className="jurassic-accent mb-2" data-text="UNPLUGGED 2.0">UNPLUGGED 2.0</h4>
                 </div>
               </Link>
             </div>
@@ -177,22 +171,17 @@ export default function Home() {
         id="tracks"
         className="relative min-h-screen w-full overflow-hidden flex items-center justify-center py-24 scroll-mt-20"
       >
-        <div
-          className="absolute inset-0 bg-center bg-cover bg-no-repeat"
-          style={{ backgroundImage: "url('/hero.png')" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/75 to-black/85" />
 
         <div className="relative z-20 w-full max-w-6xl px-6 mx-auto">
           <div className="text-center mb-20">
-            <h2 className="heading mb-8">Problem Statement</h2>
+            <h2 className="jurassic-heading jurassic-reveal mb-8" data-text="PROBLEM STATEMENT">Problem Statement</h2>
             <div className="glass max-w-5xl mx-auto rounded-2xl border border-amber-500/40 p-6 md:p-8 text-left transition-all duration-500 hover:shadow-[0_0_36px_10px_rgba(245,158,11,0.22)] hover:border-amber-400/70 mb-8">
-              <h3 className="text-xl md:text-2xl font-bold text-amber-300 mb-3">Overview</h3>
-              <p className="text-amber-100/90 text-sm md:text-base leading-relaxed">
+              <h3 className="jurassic-subheading mb-3">Overview</h3>
+              <p className="jurassic-body leading-relaxed">
                 Jungle safaris are controlled eco-tourism experiences within protected forest reserves, designed to promote wildlife conservation while allowing visitors to observe animals in their natural habitat. However, managing safari operations is increasingly complex. Most systems rely on manual logging, limited tracking, and fragmented wildlife data, making it difficult to monitor animal movement, regulate tourist flow, and prevent overcrowding in popular zones. The lack of real-time visibility and structured data restricts forest authorities from making informed, data-driven decisions for conservation planning and resource allocation. As eco-tourism grows, there is a critical need for a smarter, more organized safari management infrastructure that balances visitor engagement with long-term wildlife protection. Our initiative proposes a smart safari ecosystem to modernize operations. The system will track wildlife movement, tourist flow, and zone popularity, enabling forest authorities to optimize resources, reduce ecological impact, and enhance visitor experience. The goal is to build an intelligent, technology-driven safari infrastructure that strengthens both conservation efforts and sustainable tourism management.
               </p>
             </div>
-            <p className="text-amber-100/90 max-w-3xl mx-auto text-base md:text-lg">
+            <p className="jurassic-body max-w-3xl mx-auto text-base md:text-lg">
               Pick a speciality and dive deep into the challenge which excites you.
             </p>
           </div>
@@ -208,10 +197,8 @@ export default function Home() {
                   style={{ backgroundImage: "url('/iot.png')", backgroundColor: '#1a1a1a' }}
                 />
                 <div className="p-7 space-y-4">
-                  <h3 className="text-4xl font-bold jp-font text-jp-yellow group-hover:text-amber-300 transition-colors">
-                    IoT
-                  </h3>
-                  <p className="text-amber-100/85 leading-relaxed text-base md:text-lg">
+                  <h3 className="jurassic-accent mb-2" data-text="IOT">IoT</h3>
+                  <p className="jurassic-body leading-relaxed text-base md:text-lg">
                     Click to explore problem statement.
                   </p>
                 </div>
@@ -228,10 +215,8 @@ export default function Home() {
                   style={{ backgroundImage: "url('/vlsi.png')", backgroundColor: '#1a1a1a' }}
                 />
                 <div className="p-7 space-y-4">
-                  <h3 className="text-4xl font-bold jp-font text-jp-yellow group-hover:text-amber-300 transition-colors">
-                    VLSI
-                  </h3>
-                  <p className="text-amber-100/85 leading-relaxed text-base md:text-lg">
+                  <h3 className="jurassic-accent mb-2" data-text="VLSI">VLSI</h3>
+                  <p className="jurassic-body leading-relaxed text-base md:text-lg">
                     Click to explore problem statement.
                   </p>
                 </div>
@@ -246,15 +231,10 @@ export default function Home() {
         id="prizepool"
         className="relative min-h-screen w-full overflow-hidden flex items-center justify-center py-24 scroll-mt-20"
       >
-        <div
-          className="absolute inset-0 bg-center bg-cover bg-no-repeat"
-          style={{ backgroundImage: "url('/hero.png')" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/75 to-black/85" />
 
         <div className="relative z-20 w-full max-w-6xl px-6 mx-auto">
           <div className="text-center mb-16">
-            <h2 className="heading mb-6">Prize Pool</h2>
+            <h2 className="jurassic-heading jurassic-reveal mb-6" data-text="PRIZE POOL">PRIZE POOL</h2>
           </div>
 
           <div className="flex flex-col items-center gap-10">
@@ -286,15 +266,10 @@ export default function Home() {
         id="timeline"
         className="relative min-h-screen w-full overflow-hidden flex items-center justify-center py-24 scroll-mt-20"
       >
-        <div
-          className="absolute inset-0 bg-center bg-cover bg-no-repeat"
-          style={{ backgroundImage: "url('/hero.png')" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/75 to-black/85" />
 
         <div className="relative z-20 w-full max-w-6xl px-6 mx-auto">
           <div className="text-center mb-20">
-            <h2 className="heading mb-8">Expedition Timeline</h2>
+            <h2 className="jurassic-heading jurassic-reveal mb-8" data-text="EXPEDITION TIMELINE">EXPEDITION TIMELINE</h2>
           </div>
 
           <div className="space-y-12">
@@ -308,7 +283,7 @@ export default function Home() {
                 <div className="flex items-start gap-4">
                   <span className="text-4xl">🌍</span>
                   <div>
-                    <h3 className="text-2xl font-bold text-jp-yellow mb-2">Round 1: Online Elimination</h3>
+                    <h3 className="jurassic-subheading mb-2">ROUND 1: ONLINE ELIMINATION</h3>
                     <p className="text-amber-400 font-semibold mb-3">8th March - 20th March 2026</p>
                     <p className="text-amber-100/85 leading-relaxed mb-3">
                       The hunt begins! Submit your innovative ideas on Unstop platform. Teams will be judged on
@@ -346,7 +321,7 @@ export default function Home() {
                 <div className="flex items-start gap-4">
                   <span className="text-4xl">⚡</span>
                   <div>
-                    <h3 className="text-2xl font-bold text-jp-yellow mb-2">Round 2: Offline Hackathon</h3>
+                    <h3 className="jurassic-subheading mb-2">ROUND 2: OFFLINE HACKATHON</h3>
                     <p className="text-amber-400 font-semibold mb-3">11th April 2026 | 9:00 AM onwards</p>
                     <p className="text-amber-100/85 leading-relaxed mb-3">
                       Shortlisted teams from Round 1 gather on campus for an intense 24-hour hackathon.
@@ -369,7 +344,7 @@ export default function Home() {
                 <div className="flex items-start gap-4">
                   <span className="text-4xl">🏆</span>
                   <div>
-                    <h3 className="text-2xl font-bold text-jp-yellow mb-2">Round 3: Finals & Pitch</h3>
+                    <h3 className="jurassic-subheading mb-2">ROUND 3: FINALS & PITCH</h3>
                     <p className="text-amber-400 font-semibold mb-3">12th April 2026 | 5:00 PM onwards</p>
                     <p className="text-amber-100/85 leading-relaxed mb-3">
                       Same day as Round 2. Top 5-8 teams present their projects to a panel of expert judges.
@@ -387,7 +362,7 @@ export default function Home() {
 
           {/* Venue Map */}
           <div className="mt-20">
-            <h3 className="text-2xl font-bold text-amber-300 text-center mb-12">Event Venue: DJSCE Campus</h3>
+            <h3 className="jurassic-subheading text-center mb-12" data-text="EVENT VENUE: DJSCE CAMPUS">EVENT VENUE: DJSCE CAMPUS</h3>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="glass rounded-2xl overflow-hidden h-96">
                 <iframe
@@ -403,15 +378,14 @@ export default function Home() {
               </div>
               <div className="space-y-6">
                 <div className="glass rounded-2xl p-8">
-                  <h4 className="text-xl font-bold text-amber-300 mb-4">Campus Address</h4>
+                  <h4 className="jurassic-subheading mb-4">CAMPUS ADDRESS</h4>
                   <p className="text-amber-100/85 leading-relaxed">
-                    Dwarkadas J. Sanghvi College of Engineering<br />
-                    Vile Parle, Mumbai – 400056<br />
+                    Dwarkadas J. Sanghvi College of Engineering, Vile Parle, Mumbai – 400056<br />
                     Maharashtra, India
                   </p>
                 </div>
                 <div className="glass rounded-2xl p-8">
-                  <h4 className="text-xl font-bold text-amber-300 mb-4">Key Details</h4>
+                  <h4 className="jurassic-subheading mb-4">KEY DETAILS</h4>
                   <ul className="text-amber-100/85 space-y-3">
                     <li className="flex items-start gap-3">
                       <span className="text-jp-yellow">📍</span>
@@ -442,17 +416,12 @@ export default function Home() {
         id="faq"
         className="relative min-h-screen w-full overflow-hidden flex items-center justify-center py-24 scroll-mt-20"
       >
-        <div
-          className="absolute inset-0 bg-center bg-cover bg-no-repeat"
-          style={{ backgroundImage: "url('/hero.png')" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/75 to-black/85" />
 
         <div className="relative z-20 w-full max-w-4xl px-6 mx-auto">
           <div className="text-center mb-20">
-            <h2 className="heading mb-8">Frequently Asked Questions</h2>
-            <p className="text-amber-100/90 max-w-2xl mx-auto text-base md:text-lg">
-              Before you step into the <em>adventure of a lifetime</em> — every question you have, answered right here.
+            <h2 className="jurassic-heading jurassic-reveal mb-8" data-text="FREQUENTLY ASKED QUESTIONS">FREQUENTLY ASKED QUESTIONS</h2>
+            <p className="jurassic-body max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+              Before you step into the adventure of a lifetime — every question you have, answered right here.
             </p>
           </div>
 
