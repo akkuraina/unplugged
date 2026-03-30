@@ -15,92 +15,104 @@ export default function Home() {
       <ScrollAnimation />
       <CustomCursor />
       <NavBar />
-      {/* ── Hero ── */}
-      <section
-        className="h-screen flex items-center justify-center px-4 relative overflow-hidden pt-[104px]"
+{/* ── Hero ── */}
+<section
+  className="h-screen flex items-center justify-center px-4 relative overflow-hidden pt-[104px]"
+>
+  <div className="relative z-10 w-full max-w-4xl mx-auto h-screen flex flex-col items-center justify-center text-center">
+
+    {/* Unplugged Logo */}
+    <div className="logo-glow-bounce">
+      <Image
+        src="/unpluggedlogo.png"
+        alt="Unplugged Logo"
+        width={1200}
+        height={800}
+        className="w-[1200px] md:w-[1000px] h-auto max-h-[120vh] object-contain"
+        priority
+      />
+    </div>
+
+    {/* Registration button */}
+    <div className="absolute bottom-20 flex flex-col items-center gap-4">
+      <a
+        href="https://unstop.com/hackathons/unplugged-a-24-hour-hardware-hackathon-shri-vile-parle-kelavani-mandals-dwarkadas-j-sanghvi-college-of-engine-1655514"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="jurassic-button group relative inline-flex items-center gap-3 px-6 md:px-7 py-2 md:py-2.5 rounded-full border border-red-500/60 bg-black/55 backdrop-blur-sm font-semibold text-xs md:text-sm transition-all duration-300 hover:scale-105 hover:border-red-400 hover:shadow-[0_0_30px_10px_rgba(239,68,68,0.55)]"
       >
-        <div className="relative z-10 w-full max-w-4xl mx-auto h-screen flex flex-col items-center justify-center text-center">
+        <span className="relative flex h-3 w-3">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75" />
+          <span className="relative inline-flex rounded-full h-3 w-3 bg-red-600" />
+        </span>
+        <span className="jurassic-button group-hover:text-amber-300">
+          Registrations are live!
+        </span>
+      </a>
+    </div>
 
-          {/* Unplugged Logo */}
-          <div className="logo-glow-bounce">
-            <Image
-              src="/unpluggedlogo.png"
-              alt="Unplugged Logo"
-              width={800}
-              height={400}
-              className="w-[600px] md:w-[800px] h-auto max-h-[80vh] object-contain"
-              priority
-            />
-          </div>
+    {/* Top Section */}
+    <div className="absolute top-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-4 md:gap-0">
 
-          {/* Registration button */}
-          <div className="absolute bottom-20 flex flex-col items-center gap-4">
-            <a
-              href="https://unstop.com/hackathons/unplugged-a-24-hour-hardware-hackathon-shri-vile-parle-kelavani-mandals-dwarkadas-j-sanghvi-college-of-engine-1655514"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="jurassic-button group relative inline-flex items-center gap-3 px-6 md:px-7 py-2 md:py-2.5 rounded-full border border-red-500/60 bg-black/55 backdrop-blur-sm font-semibold text-xs md:text-sm transition-all duration-300 hover:scale-105 hover:border-red-400 hover:shadow-[0_0_30px_10px_rgba(239,68,68,0.55)]"
-            >
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75" />
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-red-600" />
-              </span>
-              <span className="jurassic-button group-hover:text-amber-300">
-                Registrations are live!
-              </span>
-            </a>
-          </div>
+      {/* Logos */}
+      <div className="flex items-center gap-4 md:gap-6">
+        <Image
+          src="/iete.png"
+          alt="IETE Logo"
+          width={100}
+          height={100}
+          className="w-16 md:w-24 h-auto object-contain"
+        />
 
-          {/* Top Section: IETE X MicroMinds + Proudly Presents */}
-          <div className="absolute top-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2">
-            <div className="flex items-center gap-2">
-              <Image
-                src="/iete.png"
-                alt="IETE Logo"
-                width={60}
-                height={60}
-                className="w-12 md:w-16 h-auto object-contain"
-              />
-              <span className="jurassic-nav text-2xl md:text-3xl font-bold">×</span>
-              <Image
-                src="/microminds.png"
-                alt="MicroMinds Logo"
-                width={60}
-                height={60}
-                className="w-12 md:w-16 h-auto object-contain"
-              />
-            </div>
-            <p className="jurassic-nav text-xs md:text-sm font-semibold tracking-widest uppercase">
-              Proudly Presents
-            </p>
-          </div>
+        <span className="jurassic-nav text-3xl md:text-5xl font-bold">×</span>
 
-          {/* Maven - absolute bottom left */}
-          <div className="absolute bottom-8 left-8 z-20 flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110">
-            <Image
-              src="/maven.png"
-              alt="Maven Silicon"
-              width={80}
-              height={80}
-              className="w-16 md:w-24 h-auto object-contain"
-            />
-            <p className="text-amber-300/80 text-[8px] md:text-xs uppercase tracking-[0.18em] font-semibold">Educational Sponsor</p>
-          </div>
+        <Image
+          src="/microminds.png"
+          alt="MicroMinds Logo"
+          width={100}
+          height={100}
+          className="w-16 md:w-24 h-auto object-contain"
+        />
+      </div>
 
-          {/* Unstop - absolute bottom right */}
-          <div className="absolute bottom-8 right-8 z-20 flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110">
-            <Image
-              src="/unstop.png"
-              alt="Unstop"
-              width={80}
-              height={80}
-              className="w-16 md:w-24 h-auto object-contain"
-            />
-            <p className="text-amber-300/80 text-[8px] md:text-xs uppercase tracking-[0.18em] font-semibold">Powered By</p>
-          </div>
+      {/* Text */}
+      <p className="jurassic-nav text-base md:text-xl font-semibold tracking-widest uppercase">
+        Proudly Presents
+      </p>
+    </div>
 
-        </div>
-      </section>
+  </div>
+
+  {/* 🔥 Maven - LEFT EDGE */}
+  <div className="absolute bottom-8 left-12 z-20 flex flex-col items-center gap-2">
+    <Image
+      src="/maven.png"
+      alt="Maven Silicon"
+      width={100}
+      height={100}
+      className="w-16 md:w-24 h-auto object-contain"
+    />
+    <p className="text-amber-300/80 text-[8px] md:text-xs uppercase tracking-[0.18em] font-semibold text-center">
+      Educational Sponsor
+    </p>
+  </div>
+
+  {/* 🔥 Unstop - RIGHT EDGE */}
+  <div className="absolute bottom-8 right-12 z-20 flex flex-col items-center gap-2">
+    <Image
+      src="/unstop.png"
+      alt="Unstop"
+      width={100}
+      height={100}
+      className="w-16 md:w-24 h-auto object-contain"
+    />
+    <p className="text-amber-300/80 text-[8px] md:text-xs uppercase tracking-[0.18em] font-semibold text-center">
+      Powered By
+    </p>
+  </div>
+
+</section>
+      
       <section
         id="about"
         className="relative min-h-screen w-full overflow-hidden flex items-center justify-center py-24 scroll-mt-20"
@@ -108,10 +120,13 @@ export default function Home() {
 
         <div className="relative z-20 w-full max-w-5xl px-6 mx-auto">
           <div className="text-center mb-16">
+          
             <h2 className="jurassic-heading jurassic-reveal mb-8" data-text="ABOUT UNPLUGGED">About Unplugged</h2>
+            <div className="glass bg-black/50 backdrop-blur-md rounded-xl p-5 text-center">
             <p className="jurassic-body max-w-3xl mx-auto text-base md:text-lg leading-relaxed">
               Unplugged is a 24 hour hardware hackathon, birthed by DJSCE IETE-ISF in year 2024. As we embark on our third edition, we join hands with DJS Microminds, a brand new VLSI club of our department. We invite you to explore the wild with us!
             </p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
@@ -142,7 +157,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/10" />
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_0_2px_rgba(245,158,11,0.5)]" />
-                <div className="relative z-10 h-full flex flex-col justify-end p-8">
+                <div className="relative z-10 h-full flex flex-col justify-end p-3">
                   <h4 className="jurassic-accent mb-2" data-text="UNPLUGGED 1.0">UNPLUGGED 1.0</h4>
                 </div>
               </Link>
@@ -157,7 +172,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/10" />
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_0_2px_rgba(245,158,11,0.5)]" />
-                <div className="relative z-10 h-full flex flex-col justify-end p-8">
+                <div className="relative z-10 h-full flex flex-col justify-end p-3">
                   <h4 className="jurassic-accent mb-2" data-text="UNPLUGGED 2.0">UNPLUGGED 2.0</h4>
                 </div>
               </Link>
@@ -168,22 +183,41 @@ export default function Home() {
 
       {/* ── Problem Statement ── */}
       <section
-        id="tracks"
-        className="relative min-h-screen w-full overflow-hidden flex items-center justify-center py-24 scroll-mt-20"
+        id="problem-statements"
+        className="relative w-full overflow-hidden py-16 scroll-mt-20"
       >
-
         <div className="relative z-20 w-full max-w-6xl px-6 mx-auto">
           <div className="text-center mb-20">
-            <h2 className="jurassic-heading jurassic-reveal mb-8" data-text="PROBLEM STATEMENT">Problem Statement</h2>
+            <h2
+              className="jurassic-heading jurassic-reveal mb-8"
+              data-text="PROBLEM STATEMENT"
+            >
+              Problem Statement
+            </h2>
+
             <div className="glass max-w-5xl mx-auto rounded-2xl border border-amber-500/40 p-6 md:p-8 text-left transition-all duration-500 hover:shadow-[0_0_36px_10px_rgba(245,158,11,0.22)] hover:border-amber-400/70 mb-8">
               <h3 className="jurassic-subheading mb-3">Overview</h3>
               <p className="jurassic-body leading-relaxed">
                 Jungle safaris are controlled eco-tourism experiences within protected forest reserves, designed to promote wildlife conservation while allowing visitors to observe animals in their natural habitat. However, managing safari operations is increasingly complex. Most systems rely on manual logging, limited tracking, and fragmented wildlife data, making it difficult to monitor animal movement, regulate tourist flow, and prevent overcrowding in popular zones. The lack of real-time visibility and structured data restricts forest authorities from making informed, data-driven decisions for conservation planning and resource allocation. As eco-tourism grows, there is a critical need for a smarter, more organized safari management infrastructure that balances visitor engagement with long-term wildlife protection. Our initiative proposes a smart safari ecosystem to modernize operations. The system will track wildlife movement, tourist flow, and zone popularity, enabling forest authorities to optimize resources, reduce ecological impact, and enhance visitor experience. The goal is to build an intelligent, technology-driven safari infrastructure that strengthens both conservation efforts and sustainable tourism management.
               </p>
             </div>
-            <p className="jurassic-body max-w-3xl mx-auto text-base md:text-lg">
-              Pick a speciality and dive deep into the challenge which excites you.
-            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Tracks ── */}
+      <section
+        id="tracks"
+        className="relative w-full overflow-hidden py-16 scroll-mt-20"
+      >
+        <div className="relative z-20 w-full max-w-6xl px-6 mx-auto">
+          <div className="text-center mb-20">
+            <h2
+              className="jurassic-heading jurassic-reveal mb-8"
+              data-text="TRACKS"
+            >
+              TRACKS
+            </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-10">
@@ -194,10 +228,12 @@ export default function Home() {
               <div className="glass rounded-2xl border border-amber-500/40 overflow-hidden h-full">
                 <div
                   className="h-44 bg-center bg-cover bg-no-repeat transition-transform duration-500 group-hover:scale-105"
-                  style={{ backgroundImage: "url('/iot.png')", backgroundColor: '#1a1a1a' }}
+                  style={{ backgroundImage: "url('/iot.png')", backgroundColor: "#1a1a1a" }}
                 />
                 <div className="p-7 space-y-4">
-                  <h3 className="jurassic-accent mb-2" data-text="IOT">IoT</h3>
+                  <h3 className="jurassic-accent mb-2" data-text="IOT">
+                    IoT
+                  </h3>
                   <p className="jurassic-body leading-relaxed text-base md:text-lg">
                     Click to explore problem statement.
                   </p>
@@ -212,10 +248,12 @@ export default function Home() {
               <div className="glass rounded-2xl border border-amber-500/40 overflow-hidden h-full">
                 <div
                   className="h-44 bg-center bg-cover bg-no-repeat transition-transform duration-500 group-hover:scale-105"
-                  style={{ backgroundImage: "url('/vlsi.png')", backgroundColor: '#1a1a1a' }}
+                  style={{ backgroundImage: "url('/vlsi.png')", backgroundColor: "#1a1a1a" }}
                 />
                 <div className="p-7 space-y-4">
-                  <h3 className="jurassic-accent mb-2" data-text="VLSI">VLSI</h3>
+                  <h3 className="jurassic-accent mb-2" data-text="VLSI">
+                    VLSI
+                  </h3>
                   <p className="jurassic-body leading-relaxed text-base md:text-lg">
                     Click to explore problem statement.
                   </p>
@@ -231,31 +269,54 @@ export default function Home() {
         id="prizepool"
         className="relative min-h-screen w-full overflow-hidden flex items-center justify-center py-24 scroll-mt-20"
       >
-
         <div className="relative z-20 w-full max-w-6xl px-6 mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="jurassic-heading jurassic-reveal mb-6" data-text="PRIZE POOL">PRIZE POOL</h2>
+
+          {/* Heading */}
+          <div className="text-center mb-12">
+            <h2 className="jurassic-heading text-8xl md:text-8xl mb-4">
+              PRIZE POOL
+            </h2>
           </div>
 
-          <div className="flex flex-col items-center gap-10">
-            <div className="group flex flex-col items-center text-center">
-              <div className="relative w-72 h-44 overflow-hidden transition-all duration-500 group-hover:scale-105">
-                <img src="/first.png" alt="First place coin" className="absolute inset-0 w-full h-full object-contain" />
+          {/* Coins */}
+          <div className="flex flex-col items-center gap-12">
+
+            {/* First Prize */}
+            <div className="flex flex-col items-center text-center">
+              <div className="relative w-[450px] h-[280px] transition-all duration-500 hover:scale-105">
+                <img
+                  src="/first.png"
+                  alt="First place coin"
+                  className="w-full h-full object-contain"
+                />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 w-full max-w-3xl place-items-center">
-              <div className="group flex flex-col items-center text-center">
-                <div className="relative w-64 h-40 overflow-hidden transition-all duration-500 group-hover:scale-105">
-                  <img src="/second.png" alt="Second place coin" className="absolute inset-0 w-full h-full object-contain" />
+            {/* Second + Third */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 w-full max-w-3xl place-items-center">
+
+              {/* Second Prize */}
+              <div className="flex flex-col items-center text-center">
+                <div className="relative w-[420px] h-[260px] transition-all duration-500 hover:scale-105">
+                  <img
+                    src="/second.png"
+                    alt="Second place coin"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </div>
 
-              <div className="group flex flex-col items-center text-center">
-                <div className="relative w-56 h-36 overflow-hidden transition-all duration-500 group-hover:scale-105">
-                  <img src="/third.png" alt="Third place coin" className="absolute inset-0 w-full h-full object-contain" />
+              {/* Third Prize */}
+              <div className="flex flex-col items-center text-center">
+                <div className="relative  w-[420px] h-[260px] transition-all duration-500 hover:scale-105">
+                  <img
+                    src="/third.png"
+                    alt="Third place coin"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </div>
+
             </div>
           </div>
         </div>
