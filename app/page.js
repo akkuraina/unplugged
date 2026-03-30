@@ -112,7 +112,7 @@ export default function Home() {
         </div>
 
         {/* 🔥 Maven - LEFT EDGE */}
-        <div className="absolute bottom-8 left-12 z-20 flex flex-col items-center gap-2">
+        <div className="absolute bottom-8 left-60 z-20 flex flex-col items-center gap-2">
           <Image
             src="/maven.png"
             alt="Maven Silicon"
@@ -126,7 +126,7 @@ export default function Home() {
         </div>
 
         {/* 🔥 Unstop - RIGHT EDGE */}
-        <div className="absolute bottom-8 right-12 z-20 flex flex-col items-center gap-2">
+        <div className="absolute bottom-8 right-60 z-20 flex flex-col items-center gap-2">
           <Image
             src="/unstop.png"
             alt="Unstop"
