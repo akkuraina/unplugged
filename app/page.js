@@ -59,7 +59,11 @@ export default function Home() {
           {/* Registration button */}
           <div className="absolute bottom-20 flex flex-col items-center gap-4">
             <a
-              href="#"  // 👉 replace with your PDF link later
+
+
+
+              href="/round1-selected-teams.pdf"  // 👉 replace with your PDF link later
+
               target="_blank"
               rel="noopener noreferrer"
               className="jurassic-button group relative inline-flex items-center gap-3 px-6 md:px-7 py-2 md:py-2.5 rounded-full border border-red-500/60 bg-black/55 backdrop-blur-sm font-semibold text-xs md:text-sm transition-all duration-300 hover:scale-105 hover:border-red-400 hover:shadow-[0_0_30px_10px_rgba(239,68,68,0.55)]"
@@ -219,7 +223,7 @@ export default function Home() {
               Problem Statement
             </h2>
 
-            <div className="glass max-w-5xl mx-auto rounded-2xl border border-amber-500/40 p-6 md:p-8 text-left transition-all duration-500 hover:shadow-[0_0_36px_10px_rgba(245,158,11,0.22)] hover:border-amber-400/70 mb-8">
+            <div className="glass max-w-5xl mx-auto rounded-2xl border border-amber-500/40 p-6 md:p-8 text-center transition-all duration-500 hover:shadow-[0_0_36px_10px_rgba(245,158,11,0.22)] hover:border-amber-400/70 mb-8">
               <h3 className="jurassic-subheading mb-3">Overview</h3>
               <p className="jurassic-body leading-relaxed">
                 Jungle safaris are controlled eco-tourism experiences within protected forest reserves, designed to promote wildlife conservation while allowing visitors to observe animals in their natural habitat. However, managing safari operations is increasingly complex. Most systems rely on manual logging, limited tracking, and fragmented wildlife data, making it difficult to monitor animal movement, regulate tourist flow, and prevent overcrowding in popular zones. The lack of real-time visibility and structured data restricts forest authorities from making informed, data-driven decisions for conservation planning and resource allocation. As eco-tourism grows, there is a critical need for a smarter, more organized safari management infrastructure that balances visitor engagement with long-term wildlife protection. Our initiative proposes a smart safari ecosystem to modernize operations. The system will track wildlife movement, tourist flow, and zone popularity, enabling forest authorities to optimize resources, reduce ecological impact, and enhance visitor experience. The goal is to build an intelligent, technology-driven safari infrastructure that strengthens both conservation efforts and sustainable tourism management.
