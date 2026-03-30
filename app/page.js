@@ -7,8 +7,31 @@ import Link from 'next/link'
 import ScrollAnimation from '@/components/ScrollAnimation'
 import CustomCursor from '@/components/CustomCursor'
 import JurassicLeaves from '@/components/JurassicLeaves'
-
+import { useEffect, useRef, useState } from "react";
 export default function Home() {
+
+  const sectionRef = useRef(null);
+const [rotate, setRotate] = useState(false);
+
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setRotate(true);
+      }
+    },
+    { threshold: 0.5 } // triggers when 50% visible
+  );
+
+  if (sectionRef.current) {
+    observer.observe(sectionRef.current);
+  }
+
+  return () => {
+    if (sectionRef.current) observer.unobserve(sectionRef.current);
+  };
+}, []);
+
   return (
     <main className="relative">
       <JurassicLeaves />
@@ -34,22 +57,23 @@ export default function Home() {
     </div>
 
     {/* Registration button */}
-    <div className="absolute bottom-20 flex flex-col items-center gap-4">
-      <a
-        href="https://unstop.com/hackathons/unplugged-a-24-hour-hardware-hackathon-shri-vile-parle-kelavani-mandals-dwarkadas-j-sanghvi-college-of-engine-1655514"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="jurassic-button group relative inline-flex items-center gap-3 px-6 md:px-7 py-2 md:py-2.5 rounded-full border border-red-500/60 bg-black/55 backdrop-blur-sm font-semibold text-xs md:text-sm transition-all duration-300 hover:scale-105 hover:border-red-400 hover:shadow-[0_0_30px_10px_rgba(239,68,68,0.55)]"
-      >
-        <span className="relative flex h-3 w-3">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75" />
-          <span className="relative inline-flex rounded-full h-3 w-3 bg-red-600" />
-        </span>
-        <span className="jurassic-button group-hover:text-amber-300">
-          Registrations are live!
-        </span>
-      </a>
-    </div>
+<div className="absolute bottom-20 flex flex-col items-center gap-4">
+  <a
+    href="#"  // 👉 replace with your PDF link later
+    target="_blank"
+    rel="noopener noreferrer"
+    className="jurassic-button group relative inline-flex items-center gap-3 px-6 md:px-7 py-2 md:py-2.5 rounded-full border border-red-500/60 bg-black/55 backdrop-blur-sm font-semibold text-xs md:text-sm transition-all duration-300 hover:scale-105 hover:border-red-400 hover:shadow-[0_0_30px_10px_rgba(239,68,68,0.55)]"
+  >
+    <span className="relative flex h-3 w-3">
+      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75" />
+      <span className="relative inline-flex rounded-full h-3 w-3 bg-red-600" />
+    </span>
+
+    <span className="group-hover:text-amber-300">
+      Round 1 Selected Teams (View List)
+    </span>
+  </a>
+</div>
 
     {/* Top Section */}
     <div className="absolute top-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-4 md:gap-0">
@@ -264,63 +288,76 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Prize Pool ── */}
-      <section
-        id="prizepool"
-        className="relative min-h-screen w-full overflow-hidden flex items-center justify-center py-24 scroll-mt-20"
-      >
-        <div className="relative z-20 w-full max-w-6xl px-6 mx-auto">
+{/* ── Prize Pool ── */}
+<section
+  ref={sectionRef}  // ✅ IMPORTANT
+  id="prizepool"
+  className="relative min-h-screen w-full overflow-hidden flex items-center justify-center py-24 scroll-mt-20"
+>
+  <div className="relative z-20 w-full max-w-6xl px-6 mx-auto">
 
-          {/* Heading */}
-          <div className="text-center mb-12">
-            <h2 className="jurassic-heading text-8xl md:text-8xl mb-4">
-              PRIZE POOL
-            </h2>
-          </div>
+    {/* Heading */}
+    <div className="text-center mb-12">
+      <h2 className="jurassic-heading text-8xl md:text-8xl mb-4">
+        PRIZE POOL
+      </h2>
+    </div>
 
-          {/* Coins */}
-          <div className="flex flex-col items-center gap-12">
+    {/* Coins */}
+    <div className="flex flex-col items-center gap-12">
 
-            {/* First Prize */}
-            <div className="flex flex-col items-center text-center">
-              <div className="relative w-[450px] h-[280px] transition-all duration-500 hover:scale-105">
-                <img
-                  src="/first.png"
-                  alt="First place coin"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </div>
+      {/* First Prize */}
+      <div className="flex flex-col items-center text-center">
+        <div
+          className={`relative w-[300px] h-[250px] transition-all duration-500 hover:scale-105 ${
+            rotate ? "animate-spin-once" : ""
+          }`}
+        >
+          <img
+            src="/first.png"
+            alt="First place coin"
+            className="w-full h-full object-contain"
+          />
+        </div>
+      </div>
 
-            {/* Second + Third */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 w-full max-w-3xl place-items-center">
+      {/* Second + Third */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 w-full max-w-3xl place-items-center">
 
-              {/* Second Prize */}
-              <div className="flex flex-col items-center text-center">
-                <div className="relative w-[420px] h-[260px] transition-all duration-500 hover:scale-105">
-                  <img
-                    src="/second.png"
-                    alt="Second place coin"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </div>
-
-              {/* Third Prize */}
-              <div className="flex flex-col items-center text-center">
-                <div className="relative  w-[420px] h-[260px] transition-all duration-500 hover:scale-105">
-                  <img
-                    src="/third.png"
-                    alt="Third place coin"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </div>
-
-            </div>
+        {/* Second Prize */}
+        <div className="flex flex-col items-center text-center">
+          <div
+            className={`relative w-[300px] h-[250px] transition-all duration-500 hover:scale-105 ${
+              rotate ? "animate-spin-once delay-200" : ""
+            }`}
+          >
+            <img
+              src="/second.png"
+              alt="Second place coin"
+              className="w-full h-full object-contain"
+            />
           </div>
         </div>
-      </section>
+
+        {/* Third Prize */}
+        <div className="flex flex-col items-center text-center">
+          <div
+            className={`relative w-[300px] h-[250px] transition-all duration-500 hover:scale-105 ${
+              rotate ? "animate-spin-once delay-400" : ""
+            }`}
+          >
+            <img
+              src="/third.png"
+              alt="Third place coin"
+              className="w-full h-full object-contain"
+            />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* ── Timeline ── */}
       <section

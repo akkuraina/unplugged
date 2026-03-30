@@ -6,8 +6,8 @@ import Link from "next/link";
 const NAV_LINKS = [
   { name: "Home", href: "#" },
   { name: "About", href: "#about" },
+  { name: "Problem Statement", href: "#problem-statements" },   // ✅ SAME SECTION
   { name: "Tracks", href: "#tracks" },               // ✅ NEW
-  { name: "Problem Statements", href: "#problem-statements" },   // ✅ SAME SECTION
   { name: "Prize Pool", href: "#prizepool" },
   { name: "Timeline", href: "#timeline" },
   { name: "FAQ", href: "#faq" },
