@@ -684,3 +684,25 @@ body {
     0 0 20px rgba(255,140,0,0.4);
   animation: jurassic-pulse 1.5s ease-in-out infinite;
 }
+
+@keyframes spinOnce{
+  from {
+     transform: perspective(1000px) rotateY(0deg);
+  }
+  to {
+   transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+.animate-spin-once {
+  animation: spinOnce 1s ease-in-out;
+}
+
+/* Optional delays */
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}

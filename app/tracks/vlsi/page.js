@@ -7,7 +7,7 @@ export default function VlsiTrackPage() {
     <main className="relative">
       <NavBar />
 
-      <section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center py-24 scroll-mt-20">
+      <section className="relative min-h-screen w-full overflow-hidden flex items-start justify-center pt-32 pb-24 scroll-mt-20">
         <div
           className="absolute inset-0 bg-center bg-cover bg-no-repeat"
           style={{ backgroundImage: "url('/jurrasicpark.png')" }}

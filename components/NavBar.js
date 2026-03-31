@@ -6,7 +6,8 @@ import Link from "next/link";
 const NAV_LINKS = [
   { name: "Home", href: "#" },
   { name: "About", href: "#about" },
-  { name: "Problem Statement", href: "#tracks" },
+  { name: "Problem Statement", href: "#problem-statements" },   // ✅ SAME SECTION
+  { name: "Tracks", href: "#tracks" },               // ✅ NEW
   { name: "Prize Pool", href: "#prizepool" },
   { name: "Timeline", href: "#timeline" },
   { name: "FAQ", href: "#faq" },
@@ -16,8 +17,9 @@ export default function NavBar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full">
       <nav className="flex items-center justify-center w-full min-h-[100px] px-5 md:px-8 lg:px-10 bg-gradient-to-b from-black/70 to-transparent backdrop-blur-sm">
-        
-        {/* Left: IETE + IIC + MicroMinds Logos
+
+        {/* Left: Logos (kept commented as is) */}
+        {/*
         <div className="flex items-center gap-4 md:gap-6 shrink-0">
           <Link href="https://djsceietesf.wordpress.com/" target="_blank">
             <Image
@@ -49,7 +51,8 @@ export default function NavBar() {
               className="object-contain h-14 md:h-16 w-[19px] md:w-[23px] brightness-125"
             />
           </Link>
-        </div> */}
+        </div>
+        */}
 
         {/* Right: Nav Links */}
         <div className="flex items-center nav-links-spacing">
